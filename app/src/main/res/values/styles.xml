@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="designing_app" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@android:color/background_light</item>
+        <item name="colorPrimary">@color/indigo800</item>
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@color/indigo800</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="designing_app.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="designing_app.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="designing_app.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
