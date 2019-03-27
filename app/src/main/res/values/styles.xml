@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/indigo800</item>
         <item name="android:textColorHint">@color/light_gray</item>
         <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="android:windowBackground">@drawable/blue_bg</item>
+        <item name="android:buttonStyle">@drawable/button_white</item>
     </style>
 
     <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">

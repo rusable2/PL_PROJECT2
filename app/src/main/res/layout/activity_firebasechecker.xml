@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pattern"
+    android:background="@drawable/bg_logo"
     android:orientation="vertical"
     tools:context=".firebasechecker">
 
@@ -17,14 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="224dp"
         android:hint="Enter email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/yellow"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp" />
+        android:textColor="@color/yellow" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -32,43 +32,41 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextEmail"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="41dp"
         android:hint="Enter password"
         android:inputType="textPassword"
-        android:textColor="@color/yellow"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp" />
+        android:textColor="@color/yellow" />
 
     <Button
         android:id="@+id/buttonSignup"
         android:layout_width="188dp"
-        android:layout_height="84dp"
+        android:layout_height="75dp"
         android:layout_alignStart="@+id/editTextEmail"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="351dp"
-        android:background="@drawable/yellow_rect_rounded_button"
-        android:onClick="createUser"
-        android:text="Signup"
-        android:textSize="25sp"
         android:layout_alignLeft="@+id/editTextEmail"
-        android:layout_marginLeft="86dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="406dp"
+        android:background="@drawable/signup_btn"
+        android:onClick="createUser"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/buttonSignup2"
         android:layout_width="188dp"
-        android:layout_height="84dp"
+        android:layout_height="75dp"
         android:layout_alignStart="@+id/editTextEmail"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="458dp"
-        android:background="@drawable/yellow_rect_rounded_button"
-        android:onClick="loginUser"
-        android:text="Log in"
-        android:textSize="25sp"
         android:layout_alignLeft="@+id/editTextEmail"
-        android:layout_marginLeft="86dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginLeft="111dp"
+        android:layout_marginTop="538dp"
+        android:background="@drawable/login_btn"
+        android:onClick="loginUser"
+        android:textSize="25sp" />
 
 
 </RelativeLayout>

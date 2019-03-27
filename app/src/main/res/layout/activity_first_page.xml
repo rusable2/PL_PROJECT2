@@ -8,11 +8,13 @@
 
     <RelativeLayout
         android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/pattern"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
@@ -38,7 +40,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="58dp"
             android:layout_marginLeft="58dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:background="@android:color/transparent"
@@ -57,7 +59,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="102dp"
             android:layout_marginLeft="102dp"
-            android:layout_marginTop="378dp"
+            android:layout_marginTop="402dp"
             android:layout_marginEnd="106dp"
             android:layout_marginRight="106dp"
             android:background="@android:color/transparent"
@@ -70,50 +72,48 @@
         android:id="@+id/view2"
         android:layout_width="412dp"
         android:layout_height="728dp"
-        android:background="@drawable/pattern"
+        android:background="@drawable/bg_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="159dp"
-            android:layout_height="63dp"
+            android:layout_width="176dp"
+            android:layout_height="70dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="117dp"
-            android:layout_marginTop="218dp"
-            android:background="@drawable/yellow_rect_rounded_button"
-            android:text="Log in"
-            android:textColor="@color/indigo800"
+            android:layout_marginTop="274dp"
+            android:background="@drawable/login_btn"
             android:textSize="25sp" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="156dp"
-            android:layout_height="64dp"
+            android:layout_width="176dp"
+            android:layout_height="70dp"
             android:layout_below="@+id/button2"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="117dp"
-            android:layout_marginLeft="105dp"
+            android:layout_marginLeft="117dp"
             android:layout_marginTop="69dp"
-            android:background="@drawable/yellow_rect_rounded_button"
-            android:text="sign up"
+            android:background="@drawable/signup_btn"
             android:textColor="@color/indigo800"
             android:textSize="25sp" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="156dp"
-            android:layout_height="64dp"
+            android:layout_width="176dp"
+            android:layout_height="70dp"
             android:layout_below="@+id/button3"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="117dp"
-            android:layout_marginLeft="121dp"
-            android:layout_marginTop="68dp"
-            android:background="@drawable/yellow_rect_rounded_button"
-            android:text="Guest Account"
+            android:layout_marginLeft="117dp"
+            android:layout_marginTop="69dp"
+            android:background="@drawable/guest_btn"
             android:textColor="@color/indigo800"
             android:textSize="25sp" />
 

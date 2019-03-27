@@ -3,7 +3,8 @@
     package="com.example.pl_project2">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,9 +14,9 @@
         android:theme="@style/designing_app">
         <activity android:name=".imageloader">
             <intent-filter>
-                <action android:name="com.example.pl_project2.imageloader"/>
+                <action android:name="com.example.pl_project2.imageloader" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".tshirt2" />

@@ -23,8 +23,7 @@
             android:layout_marginTop="36dp"
             android:layout_toEndOf="@+id/clear"
             android:layout_toRightOf="@+id/clear"
-            android:background="@color/yellow"
-            android:text="Save"
+            android:background="@drawable/save_btn"
             android:textColor="@color/indigo800"
             android:textSize="20sp" />
 
@@ -50,14 +49,13 @@
             android:layout_marginStart="53dp"
             android:layout_marginLeft="53dp"
             android:layout_marginTop="35dp"
-            android:background="@color/yellow"
-            android:text="Clear?"
+            android:background="@drawable/back_btn"
             android:textColor="@color/indigo800"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/cont"
-            android:layout_width="115dp"
+            android:layout_width="130dp"
             android:layout_height="67dp"
             android:layout_below="@+id/clear"
             android:layout_alignParentStart="true"
@@ -65,8 +63,7 @@
             android:layout_marginStart="123dp"
             android:layout_marginLeft="123dp"
             android:layout_marginTop="28dp"
-            android:background="@color/yellow"
-            android:text="CONTINUE"
+            android:background="@drawable/continue_btn"
             android:textColor="@color/indigo800"
             android:textSize="20sp" />
 
