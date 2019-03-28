@@ -19,7 +19,7 @@ public class Clothes extends AppCompatActivity {
     ListAdapter ls2,ls3,ls4;
     ListView lv2,lv3,lv4;
     ImageButton ib1;
-    String colourst[] = {"White","Black","Red","Green","Blue"};
+    String colourst[] = {"White","Yellow","Red","Green","Blue"};
     String coloursh[] = {"Yellow","Red","Blue","Green","Bluegreen"};
     String colourss[] = {"Black","Red","Orange","Green","Blue"};
     String cl,cl2,cl3;
@@ -135,7 +135,7 @@ public class Clothes extends AppCompatActivity {
         b11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Clothes.this, finaltshirt.class);
+                Intent i = new Intent("com.example.pl_project2.finaltshirt");
                 i.putExtra("Colours",cl);
                 startActivity(i);
             }

@@ -84,7 +84,8 @@ public class finalsweatshirt extends AppCompatActivity {
         cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(finalsweatshirt.this, tshirt2.class);
+                Intent i2 = new Intent(finalsweatshirt.this, purchasingsweatshirt.class);
+                i2.putExtra("type", color);
                 startActivity(i2);
             }
         });

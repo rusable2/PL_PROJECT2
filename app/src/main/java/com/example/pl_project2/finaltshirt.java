@@ -53,19 +53,21 @@ public class finaltshirt extends AppCompatActivity {
             c_id=1;
         else if(color.equals("Blue"))
             c_id=2;
-        else if(color.equals("Black"))
+        else if(color.equals("Yellow"))
             c_id=3;
         else if (color.equals("Green"))
             c_id=4;
 
         if(c_id==0)
             im2.setImageResource(R.drawable.tshirtfront);
+        else if(c_id==3)
+            im2.setImageResource(R.drawable.tshirt_yellow2);
         else if(c_id==1)
             im2.setImageResource(R.drawable.tshirt_red);
         else if(c_id==2)
             im2.setImageResource(R.drawable.tshirt_blue);
-        else
-            im2.setImageResource(android.R.color.transparent);
+        else if(c_id==4)
+            im2.setImageResource(R.drawable.tshirt_green2);
     }
 
     private void onClick()
@@ -86,7 +88,7 @@ public class finaltshirt extends AppCompatActivity {
         cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent("com.example.pl_project.purchasingtshirt");
+                Intent i2 = new Intent(finaltshirt.this, purchasingtshirt.class);
                 i2.putExtra("type", color);
                 startActivity(i2);
             }
