@@ -1,29 +1,25 @@
 package com.example.pl_project2;
 
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
 
-public class finaltshirt extends AppCompatActivity {
+public class finalsweatshirt extends AppCompatActivity {
     Button clear,save,cont;
     ImageView im2;
     int c_id;
@@ -47,25 +43,27 @@ public class finaltshirt extends AppCompatActivity {
     private void pickImage() {
         Intent i = getIntent();
         color = i.getStringExtra("Colours").toString();
-        if(color.equals("White"))
+        if(color.equals("Black"))
             c_id=0;
         else if(color.equals("Red"))
             c_id=1;
-        else if(color.equals("Blue"))
+        else if(color.equals("Orange"))
             c_id=2;
-        else if(color.equals("Black"))
+        else if(color.equals("Green"))
             c_id=3;
-        else if (color.equals("Green"))
+        else if (color.equals("Blue"))
             c_id=4;
 
         if(c_id==0)
-            im2.setImageResource(R.drawable.tshirtfront);
+            im2.setImageResource(R.drawable.sweat_black1);
         else if(c_id==1)
-            im2.setImageResource(R.drawable.tshirt_red);
+            im2.setImageResource(R.drawable.sweat_red1);
         else if(c_id==2)
-            im2.setImageResource(R.drawable.tshirt_blue);
+            im2.setImageResource(R.drawable.sweat_orange1);
+        else if(c_id==3)
+            im2.setImageResource(R.drawable.sweat_green2);
         else
-            im2.setImageResource(android.R.color.transparent);
+            im2.setImageResource(R.drawable.sweat_blue2);
     }
 
     private void onClick()
@@ -73,7 +71,7 @@ public class finaltshirt extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(finaltshirt.this, Clothes.class);
+                Intent i2 = new Intent(finalsweatshirt.this, Clothes.class);
                 startActivity(i2);
             }
         });
@@ -86,15 +84,15 @@ public class finaltshirt extends AppCompatActivity {
         cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(finaltshirt.this, tshirt2.class);
+                Intent i2 = new Intent(finalsweatshirt.this, tshirt2.class);
                 startActivity(i2);
             }
         });
     }
     private void save()
     {
-        StorageReference s = storageRef.child("tshirts.jpg/");
-        StorageReference stref = s.child("tshirt" + i + ".jpg/");
+        StorageReference s = storageRef.child("sweatshirts.jpg/");
+        StorageReference stref = s.child("sweatshirt" + i + ".jpg/");
         // Get the data from an ImageView as bytes
         im2.setDrawingCacheEnabled(true);
         im2.buildDrawingCache();

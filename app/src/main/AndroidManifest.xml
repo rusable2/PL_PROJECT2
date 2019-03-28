@@ -12,7 +12,21 @@
         android:roundIcon="@drawable/icon2"
         android:supportsRtl="true"
         android:theme="@style/designing_app">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".finalsweatshirt">
+            <intent-filter>
+                <action android:name="com.example.pl_project2.finalsweatshirt"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".finalhoodie" >
+            <intent-filter>
+                <action android:name="com.example.pl_project2"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".imageloader">
             <intent-filter>
                 <action android:name="com.example.pl_project2.imageloader" />

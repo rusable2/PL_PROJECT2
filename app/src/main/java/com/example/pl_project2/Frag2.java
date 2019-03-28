@@ -1,5 +1,6 @@
 package com.example.pl_project2;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -49,10 +50,13 @@ public class Frag2 extends android.support.v4.app.DialogFragment{
         final Button[] b = new Button[1];
         final Button[] b2 = new Button[1];
         ad.setOnShowListener(new DialogInterface.OnShowListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onShow(final DialogInterface dialog) {
+                ad.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(R.color.neongreen);
+                ad.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(R.color.red);
                 b[0] = ad.getButton(DialogInterface.BUTTON_POSITIVE);
-                b2[0] = ad.getButton(DialogInterface.BUTTON_NEGATIVE);
+                b2[0] = ad.getButton(DialogInterface.BUTTON_NEUTRAL);
 
 
             }
