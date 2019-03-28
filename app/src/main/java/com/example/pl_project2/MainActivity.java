@@ -2,6 +2,7 @@ package com.example.pl_project2;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
                             Toast.makeText(MainActivity.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
+                            Intent i2 = new Intent(MainActivity.this, purchased.class);
+                            startActivity(i2);
                         }
                     });
                     alertBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

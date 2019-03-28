@@ -11,10 +11,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class FirstPage extends AppCompatActivity {
     View v1,v2;
     ImageButton ib2;
+    TextView tv;
     Button b2,b3,b4;
     int animation;
     DialogFragment f = new Frag2();
@@ -31,7 +35,9 @@ public class FirstPage extends AppCompatActivity {
         b2 = findViewById(R.id.button2);
         b3 = findViewById(R.id.button3);
         b4 = findViewById(R.id.button4);
+        tv=findViewById(R.id.textView);
         animation = getResources().getInteger(android.R.integer.config_shortAnimTime);
+        tv.setText("SUPERFLY");
         onClick();
     }
 
