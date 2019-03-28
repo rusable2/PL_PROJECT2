@@ -71,7 +71,7 @@
         android:layout_marginStart="86dp"
         android:layout_marginLeft="86dp"
         android:layout_marginTop="126dp"
-        android:background="@drawable/new_tshirt"
+        android:background="@drawable/tshirt_new"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
@@ -85,7 +85,7 @@
         android:layout_marginStart="87dp"
         android:layout_marginLeft="87dp"
         android:layout_marginTop="217dp"
-        android:background="@drawable/new_sweatshirt"
+        android:background="@drawable/sweatshirt_new"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
@@ -99,7 +99,7 @@
         android:layout_marginStart="86dp"
         android:layout_marginLeft="86dp"
         android:layout_marginTop="312dp"
-        android:background="@drawable/new_hoodie"
+        android:background="@drawable/hoodie_new"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 

@@ -143,7 +143,7 @@ public class Clothes extends AppCompatActivity {
         b12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Clothes.this, finalsweatshirt.class);
+                Intent i = new Intent("com.example.pl_project2.finalsweatshirt");
                 i.putExtra("Colours",cl2);
                 startActivity(i);
             }
@@ -151,7 +151,7 @@ public class Clothes extends AppCompatActivity {
         b13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Clothes.this, finalhoodie.class);
+                Intent i = new Intent("com.example.pl_project2.finalhoodie");
                 i.putExtra("Colours",cl3);
                 startActivity(i);
             }

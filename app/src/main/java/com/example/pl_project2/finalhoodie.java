@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -20,7 +21,7 @@ import java.io.ByteArrayOutputStream;
 
 
 public class finalhoodie extends AppCompatActivity {
-    Button clear,save,cont;
+    Button clear,save,purc;
     ImageView im2;
     int c_id;
     int i;
@@ -33,7 +34,7 @@ public class finalhoodie extends AppCompatActivity {
         setContentView(R.layout.activity_finaltshirt);
         clear = findViewById(R.id.clear);
         save = findViewById(R.id.save);
-        cont = findViewById(R.id.cont);
+        purc = findViewById(R.id.cont);
         im2 = findViewById(R.id.imageView2);
         im2.setImageResource(android.R.color.transparent);
         i = (int) (Math.random()*((29999-0)-1));
@@ -81,10 +82,11 @@ public class finalhoodie extends AppCompatActivity {
                 save();
             }
         });
-        cont.setOnClickListener(new View.OnClickListener() {
+        purc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(finalhoodie.this, tshirt2.class);
+                Intent i2 = new Intent(finalhoodie.this, purchasinghoodie.class);
+                i2.putExtra("type", color);
                 startActivity(i2);
             }
         });
