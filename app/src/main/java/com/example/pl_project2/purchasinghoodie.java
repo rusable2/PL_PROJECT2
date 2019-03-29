@@ -37,7 +37,7 @@ public class purchasinghoodie extends AppCompatActivity {
             public void onClick(View v) {
                 prc = ed.getText().toString();
                 price = Integer.parseInt(prc);
-                tv3.setText("Price of one Hoodie - 799\n\nTotal Price - " +(799*price));
+                tv3.setText("Price of one Hoodie - 799.00\n\nTotal Price - " +(799*price)+".00");
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {

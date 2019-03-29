@@ -24,11 +24,11 @@ import java.io.ByteArrayOutputStream;
 
 
 public class finaltshirt extends AppCompatActivity {
-    Button clear,save,cont;
+    Button clear,save,cont,getcloud;
     ImageView im2;
     int c_id;
-    int i;
-    String color;
+    int in;
+    String color,id;
     FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
     StorageReference storageRef = firebaseStorage.getReference();
     @Override
@@ -38,9 +38,10 @@ public class finaltshirt extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         save = findViewById(R.id.save);
         cont = findViewById(R.id.cont);
+        getcloud = findViewById(R.id.get);
         im2 = findViewById(R.id.imageView2);
         im2.setImageResource(android.R.color.transparent);
-        i = (int) (Math.random()*((29999-0)-1));
+        in = (int) (Math.random()*((29999-0)-1));
         pickImage();
         onClick();
     }
@@ -93,11 +94,22 @@ public class finaltshirt extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+        getcloud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = String.valueOf(in);
+                Intent i2 = new Intent("com.example.pl_project2.tshirt2");
+                i2.putExtra("id", id);
+                i2.putExtra("type", "tshirt");
+                i2.putExtra("color", color);
+                startActivity(i2);
+            }
+        });
     }
     private void save()
     {
         StorageReference s = storageRef.child("tshirts.jpg/");
-        StorageReference stref = s.child("tshirt" + i + ".jpg/");
+        StorageReference stref = s.child("tshirt" + in + ".jpg/");
         // Get the data from an ImageView as bytes
         im2.setDrawingCacheEnabled(true);
         im2.buildDrawingCache();
@@ -115,6 +127,7 @@ public class finaltshirt extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(finaltshirt.this, "Image uploaded to Firebase", Toast.LENGTH_SHORT).show();
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
                 // ...
             }

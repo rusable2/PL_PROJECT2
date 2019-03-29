@@ -2,6 +2,7 @@
 <resources>
     <color name="neongreen">#04F904</color>
     <color name="indigo800">#FFFFFF</color>
+    <color name="indi">#6f00ff</color>
     <color name="yellow">#000000</color>
     <color name="red">#F90404</color>
     <color name="light_gray">#D3D3D3</color>

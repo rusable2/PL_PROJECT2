@@ -11,16 +11,11 @@ import android.widget.ImageView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class tshirt2 extends AppCompatActivity {
+public class sweatshirt2 extends AppCompatActivity {
 
 
     FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
@@ -45,7 +40,7 @@ public class tshirt2 extends AppCompatActivity {
     }
 
     private void download() {
-        StorageReference s = storageRef.child("tshirts.jpg");
+        StorageReference s = storageRef.child("sweatshirts.jpg");
         StorageReference stref = s.child(type+in+".jpg");
         final long ONE_MEGABYTE = 1024 * 1024;
         stref.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -64,7 +59,7 @@ public class tshirt2 extends AppCompatActivity {
         purc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 =  new Intent(tshirt2.this, purchasingtshirt.class);
+                Intent i2 =  new Intent(sweatshirt2.this, purchasingsweatshirt.class);
                 i2.putExtra("type", clr);
                 startActivity(i2);
             }

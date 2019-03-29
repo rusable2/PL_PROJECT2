@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,11 +21,11 @@ import java.io.ByteArrayOutputStream;
 
 
 public class finalsweatshirt extends AppCompatActivity {
-    Button clear,save,cont;
+    Button clear,save,cont,purc2;
     ImageView im2;
     int c_id;
-    int i;
-    String color;
+    int in;
+    String color,id;
     FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
     StorageReference storageRef = firebaseStorage.getReference();
     @Override
@@ -34,9 +35,10 @@ public class finalsweatshirt extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         save = findViewById(R.id.save);
         cont = findViewById(R.id.cont);
+        purc2 = findViewById(R.id.get);
         im2 = findViewById(R.id.imageView2);
         im2.setImageResource(android.R.color.transparent);
-        i = (int) (Math.random()*((29999-0)-1));
+        in = (int) (Math.random()*((29999-0)-1));
         pickImage();
         onClick();
     }
@@ -89,11 +91,22 @@ public class finalsweatshirt extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+        purc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = String.valueOf(in);
+                Intent i2 = new Intent(finalsweatshirt.this, sweatshirt2.class);
+                i2.putExtra("id", id);
+                i2.putExtra("type", "sweatshirt");
+                i2.putExtra("color", color);
+                startActivity(i2);
+            }
+        });
     }
     private void save()
     {
         StorageReference s = storageRef.child("sweatshirts.jpg/");
-        StorageReference stref = s.child("sweatshirt" + i + ".jpg/");
+        StorageReference stref = s.child("sweatshirt" + in + ".jpg/");
         // Get the data from an ImageView as bytes
         im2.setDrawingCacheEnabled(true);
         im2.buildDrawingCache();
@@ -111,6 +124,7 @@ public class finalsweatshirt extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(finalsweatshirt.this, "Uploaded image to Firebase", Toast.LENGTH_SHORT).show();
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
                 // ...
             }

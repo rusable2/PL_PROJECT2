@@ -10,7 +10,6 @@
         android:id="@+id/relativeLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:background="@drawable/pattern"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,5 +25,17 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="97dp"
             app:srcCompat="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/purc"
+            android:layout_width="133dp"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="117dp"
+            android:layout_marginLeft="117dp"
+            android:layout_marginTop="449dp"
+            android:background="@drawable/purchase_btn" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

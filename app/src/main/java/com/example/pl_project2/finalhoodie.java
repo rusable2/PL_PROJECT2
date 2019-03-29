@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -21,11 +22,11 @@ import java.io.ByteArrayOutputStream;
 
 
 public class finalhoodie extends AppCompatActivity {
-    Button clear,save,purc;
+    Button clear,save,purc,purc2;
     ImageView im2;
     int c_id;
-    int i;
-    String color;
+    int in;
+    String color,id;
     FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
     StorageReference storageRef = firebaseStorage.getReference();
     @Override
@@ -35,15 +36,17 @@ public class finalhoodie extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         save = findViewById(R.id.save);
         purc = findViewById(R.id.cont);
+        purc2 = findViewById(R.id.get);
         im2 = findViewById(R.id.imageView2);
         im2.setImageResource(android.R.color.transparent);
-        i = (int) (Math.random()*((29999-0)-1));
+        in = (int) (Math.random()*((29999-0)-1));
         pickImage();
         onClick();
     }
     private void pickImage() {
         Intent i = getIntent();
         color = i.getStringExtra("Colours").toString();
+        id = String.valueOf(in);
         if(color.equals("Yellow"))
             c_id=0;
         else if(color.equals("Red"))
@@ -90,11 +93,22 @@ public class finalhoodie extends AppCompatActivity {
                 startActivity(i2);
             }
         });
+        purc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                id = String.valueOf(in);
+                Intent i2 = new Intent(finalhoodie.this, hoodie2.class);
+                i2.putExtra("id", id);
+                i2.putExtra("type", "hoodies");
+                i2.putExtra("color", color);
+                startActivity(i2);
+            }
+        });
     }
     private void save()
     {
         StorageReference s = storageRef.child("hoodies.jpg/");
-        StorageReference stref = s.child("hoodies" + i + ".jpg/");
+        StorageReference stref = s.child("hoodies" + in + ".jpg/");
         // Get the data from an ImageView as bytes
         im2.setDrawingCacheEnabled(true);
         im2.buildDrawingCache();
@@ -112,6 +126,7 @@ public class finalhoodie extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(finalhoodie.this, "Image uploaded to Firebase", Toast.LENGTH_SHORT).show();
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
                 // ...
             }

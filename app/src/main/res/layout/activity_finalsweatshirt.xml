@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".finalsweatshirt">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,15 +16,15 @@
 
         <Button
             android:id="@+id/save"
-            android:layout_width="115dp"
+            android:layout_width="130dp"
             android:layout_height="67dp"
             android:layout_below="@+id/imageView2"
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
             android:layout_marginTop="36dp"
             android:layout_toEndOf="@+id/clear"
             android:layout_toRightOf="@+id/clear"
-            android:background="@drawable/save_btn"
+            android:background="@drawable/save_cloud"
             android:textColor="@color/indigo800"
             android:textSize="20sp" />
 
@@ -41,13 +42,13 @@
 
         <Button
             android:id="@+id/clear"
-            android:layout_width="115dp"
+            android:layout_width="130dp"
             android:layout_height="67dp"
             android:layout_below="@+id/imageView2"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginLeft="53dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="35dp"
             android:background="@drawable/back_btn"
             android:textColor="@color/indigo800"
@@ -60,13 +61,26 @@
             android:layout_below="@+id/clear"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="123dp"
-            android:layout_marginLeft="123dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/continue_btn"
+            android:background="@drawable/purchase_btn"
+            android:textColor="@color/indigo800"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/get"
+            android:layout_width="130dp"
+            android:layout_height="67dp"
+            android:layout_below="@+id/clear"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="187dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/get_cloud"
             android:textColor="@color/indigo800"
             android:textSize="20sp" />
 
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

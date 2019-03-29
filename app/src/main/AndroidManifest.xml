@@ -12,6 +12,20 @@
         android:roundIcon="@drawable/icon2"
         android:supportsRtl="true"
         android:theme="@style/designing_app">
+        <activity android:name=".sweatshirt2">
+            <intent-filter>
+                <action android:name="com.example/pl_project2.sweatshirt2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".hoodie2">
+            <intent-filter>
+                <action android:name="com.example/pl_project2.hoodie2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".purchasingsweatshirt">
             <intent-filter>
                 <action android:name="com.example.pl_project2.purchasingsweatshirt" />
@@ -19,7 +33,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".purchasingtshirt" >
+        <activity android:name=".purchasingtshirt">
             <intent-filter>
                 <action android:name="com.example.pl_project2.purchasingtshirt" />
 
